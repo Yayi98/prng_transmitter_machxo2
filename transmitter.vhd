@@ -102,7 +102,7 @@ begin
         SBYTECLK => clk
     );
 
-    piso_inst : entity work.piso_inst
+    piso_inst : entity work.piso
     port map (
         sclk  => sclk,
         reset => reset,
