@@ -102,24 +102,23 @@ begin
         SBYTECLK => clk
     );
 
-    piso_inst : entity work.piso
+    piso_inst : entity work.serializer8_1
     port map (
         sclk  => sclk,
+        clk   => clk,
         reset => reset,
-        load  => load,
-        pdata(9) => JO,
-        pdata(8) => IO,
-        pdata(7) => HO,
-        pdata(6) => GO,
-        pdata(5) => FO,
-        pdata(4) => EO,
-        pdata(3) => DO,
-        pdata(2) => CO,
-        pdata(1) => BO,
-        pdata(0) => AO,
-        sdata => serial
-    );
 
-    sdata <= serial;
+        pdataIn(9) => JO,
+        pdataIn(8) => IO,
+        pdataIn(7) => HO,
+        pdataIn(6) => GO,
+        pdataIn(5) => FO,
+        pdataIn(4) => EO,
+        pdataIn(3) => DO,
+        pdataIn(2) => CO,
+        pdataIn(1) => BO,
+        pdataIn(0) => AO,
+        sdataOut => sdata
+        );
 
 end rtl;
