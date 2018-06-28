@@ -14,7 +14,7 @@ entity serializer8_1 is
         pdataIn  : in std_logic_vector(9 downto 0);
         sclk     : in std_logic; -- 100MHz
         clk      : in std_logic; -- 25 MHz
-        reset    : in std_logic
+        reset    : in std_logic;
         sdataOut : out std_logic
     );
 end serializer8_1;
