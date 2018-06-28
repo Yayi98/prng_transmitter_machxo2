@@ -14,16 +14,25 @@ entity serializer8_1 is
         pdataIn  : in std_logic_vector(9 downto 0);
         sclk     : in std_logic; -- 100MHz
         clk      : in std_logic; -- 25 MHz
-        reset    : in std_logic;
+        reset    : in std_logic
         sdataOut : out std_logic
     );
 end serializer8_1;
 
 architecture rtl of serializer8_1 is
+
     signal serial1tomux : std_logic := '0';
     signal serial2tomux : std_logic := '0';
     signal muxout       : std_logic := '0';
     signal mux_select   : std_logic := '0';
+
+    component ODDRX4B
+    port (
+        D0,D1,D2,D3,D4,D5,D6,D7,ECLK,SCLK,RST : in std_logic;
+        Q : out std_logic
+    );
+end component;
+
 begin
     serializer_inst1 : ODDRX4B
     generic map (
@@ -64,7 +73,7 @@ begin
     );
 
     counterproc : process(sclk,reset)
-    signal temp1 : integer range 0 to 9 := 9; -- temp1 is initiated with 9 because the counting must start from 0
+    signal temp1 : integer range 0 to 9 := 0;
     signal temp2 : std_logic := '0';
     begin
         if reset = '1' then
