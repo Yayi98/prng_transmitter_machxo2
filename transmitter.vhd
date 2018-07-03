@@ -68,6 +68,7 @@ architecture rtl of transmitter is
 
     --reg40
     signal reg40    : std_logic_vector (39 downto 0) := (others => '0');
+
     --mux signal input
     signal mux_in     : std_logic_vector (7 downto 0) := (others => '0');
 
