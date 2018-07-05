@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------
---  transmitter.vhd
+--  transmitter_final.vhd
 --	Version 1.0
 --
 --  Copyright (C) 2018 Mahesh Chandra Yayi
