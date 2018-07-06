@@ -1,5 +1,5 @@
 ----------------------------------------------------------------------------
---  transmitter.vhd
+--  transmitter_final.vhd
 --	Version 1.0
 --
 --  Copyright (C) 2018 Mahesh Chandra Yayi
@@ -39,7 +39,7 @@ architecture rtl of transmitter is
 
     signal sclk    : std_logic;
     signal clk     : std_logic;
-    signal stop    : std_logic;  
+    signal stop    : std_logic;
     signal tempreg : std_logic_vector (9 downto 0) := (others => '0');
     signal regfull : std_logic_vector (2 downto 0) := (others => '0');
 

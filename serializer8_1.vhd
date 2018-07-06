@@ -1,3 +1,15 @@
+----------------------------------------------------------------------------
+--  serializer8_1.vhd
+--	Version 1.0
+--
+--  Copyright (C) 2018 Mahesh Chandra Yayi
+--
+--	This program is free software: you can redistribute it and/or
+--	modify it under the terms of the GNU General Public License
+--	as published by the Free Software Foundation, either version
+--	2 of the License, or (at your option) any later version.
+----------------------------------------------------------------------------
+
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 use ieee.numeric_std.all;
